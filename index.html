@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Beta 5 Out?</title>
+    <link rel="icon" href="DITTO.png" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background: #000;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            color-scheme: dark;
+        }
+
+        #topTitle {
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 10px 15px;
+            user-select: none;
+            z-index: 30;
+            background: transparent;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #no {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20vw;
+            line-height: 1;
+            color: #ff4040;
+            text-shadow: 0 0 40px rgba(255, 64, 64, 0.85);
+            margin: 0;
+            user-select: none;
+            cursor: default;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        #no:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        #tagline {
+            font-size: 0.2em;
+            color: #ff4040;
+            text-shadow: inherit;
+            white-space: nowrap;
+        }
+
+        #statusBox {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 320px;
+            max-width: 90vw;
+            background: #111;
+            border: 4px solid #ff4040;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            color: #fff;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            z-index: 10;
+            box-shadow: 4px 0 10px rgba(255, 64, 64, 0.3);
+        }
+
+        #statusBox h3 {
+            margin: 0.8rem 0 0.4rem;
+            font-size: 1.1rem;
+            color: #ff6a6a;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.2rem;
+        }
+
+        #statusBox ul {
+            margin: 0 0 0.5rem 1rem;
+            padding: 0;
+            list-style: square;
+        }
+
+        #statusBox p {
+            margin-left: 1rem;
+        }
+
+        #links {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 0.6rem;
+            z-index: 20;
+        }
+
+        #links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            background: #111;
+            border: 2px solid #fff;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s;
+        }
+
+        #links a img {
+            width: 28px;
+            height: 28px;
+        }
+
+        #links a span {
+            font-size: 1.4rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        #links a:hover {
+            transform: scale(1.1);
+            background: #222;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 12px;
+            right: 12px;
+            font-size: 0.85rem;
+            color: #888;
+            text-align: right;
+            z-index: 5;
+        }
+
+        @media (max-width: 768px) {
+            #no {
+                font-size: 32vw;
+            }
+
+            #statusBox {
+                width: 260px;
+                font-size: 0.85rem;
+            }
+
+            #links a {
+                width: 48px;
+                height: 48px;
+            }
+
+            #links a img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .stop-asking {
+            position: fixed;
+            font-size: 2.2vw;
+            color: #ff4040;
+            text-shadow: 0 0 20px rgba(255, 64, 64, 0.85);
+            pointer-events: none;
+            user-select: none;
+            z-index: 8;
+            animation: fadeOut 3.5s ease forwards;
+            white-space: nowrap;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topTitle">Is Beta 5 out yet? 🤓☝️</div>
+
+    <h1 id="no">NO</h1>
+
+    <div id="statusBox">
+        <h3>Currently Working On:</h3>
+        <ul>
+            <li>Reworking Sprites</li>
+        </ul>
+
+        <h3>What's Left To Do:</h3>
+        <ul>
+            <li>Map Past Arc</li>
+            <li>Code Past Arc</li>
+        </ul>
+
+        <h3>What's Confirmed (Almost) Done:</h3>
+        <ul>
+            <li>Southern Isles</li>
+        </ul>
+
+        <h3>Estimated Update Date by the Developer:</h3>
+        <p>None</p>
+    </div>
+
+    <div id="links">
+        <a href="https://x.com/PkmnUnbreakTies" target="_blank" aria-label="Twitter / X"><span>𝕏</span></a>
+        <a href="https://www.patreon.com/c/SSamurai/home" target="_blank" aria-label="Patreon">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968747.png" alt="Patreon Icon">
+        </a>
+    </div>
+
+    <div id="footer">
+        Created and Administrated by Krul con Perish™
+    </div>
+    <script>
+        function spawnStopAsking() {
+            const el = document.createElement('div');
+            el.className = 'stop-asking';
+            el.textContent = 'stop asking';
+
+            el.style.top = Math.random() * 90 + '%';
+            el.style.left = Math.random() * 90 + '%';
+            el.style.fontSize = (2 + Math.random() * 2) + 'vw';
+
+            document.body.appendChild(el);
+
+            setTimeout(() => {
+                el.remove();
+            }, 2000);
+        }
+
+        setInterval(spawnStopAsking, 1200);
+    </script>
+
+</body>
+
+</html>
