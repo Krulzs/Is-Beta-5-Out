@@ -2,296 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is Beta 5 Out?</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DittoNews</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="DITTO.png" />
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
-
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            background: #000;
-            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-            color-scheme: dark;
-            scroll-behavior: smooth
-        }
-
-        #hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden
-        }
-
-        #no {
-            font-size: 20vw;
-            line-height: 1;
-            color: #ff4040;
-            text-shadow: 0 0 40px rgba(255, 64, 64, .85);
-            user-select: none;
-            cursor: default;
-            transition: transform .3s;
-            text-align: center;
-            white-space: nowrap
-        }
-
-        #no:hover {
-            transform: scale(1.05)
-        }
-
-        #tagline {
-            font-size: 4vw;
-            color: #ff4040;
-            text-shadow: inherit;
-            white-space: nowrap;
-            user-select: none
-        }
-
-        #statusBox {
-            position: fixed;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 320px;
-            max-width: 90vw;
-            background: #111;
-            border: 4px solid #ff4040;
-            border-radius: 0 12px 12px 0;
-            padding: 1rem 1.25rem;
-            color: #fff;
-            font-size: .95rem;
-            line-height: 1.6;
-            z-index: 10;
-            box-shadow: 4px 0 10px rgba(255, 64, 64, .3)
-        }
-
-        #statusBox h3 {
-            margin: .8rem 0 .4rem;
-            font-size: 1.1rem;
-            color: #ff6a6a;
-            border-bottom: 1px solid #333;
-            padding-bottom: .2rem
-        }
-
-        #statusBox ul {
-            margin: 0 0 .5rem 1rem;
-            list-style: square
-        }
-
-        #statusBox p {
-            margin-left: 1rem
-        }
-
-        #topTitle {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 10px 15px;
-            color: #fff;
-            font-size: 2.5rem;
-            font-weight: 600;
-            user-select: none;
-            z-index: 30
-        }
-
-        #links {
-            position: fixed;
-            top: 12px;
-            right: 12px;
-            display: flex;
-            gap: .6rem;
-            z-index: 20
-        }
-
-        #links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 54px;
-            height: 54px;
-            background: #111;
-            border: 2px solid #fff;
-            text-decoration: none;
-            transition: transform .2s, background .2s
-        }
-
-        #links a img {
-            width: 28px;
-            height: 28px
-        }
-
-        #links a span {
-            font-size: 1.4rem;
-            color: #fff;
-            font-weight: 700
-        }
-
-        #links a:hover {
-            transform: scale(1.1);
-            background: #222
-        }
-
-        #footer {
-            position: fixed;
-            bottom: 12px;
-            right: 12px;
-            font-size: .85rem;
-            color: #888;
-            text-align: right;
-            z-index: 5
-        }
-
-        .stop-asking {
-            position: fixed;
-            font-size: 2.2vw;
-            color: #ff4040;
-            text-shadow: 0 0 20px rgba(255, 64, 64, .85);
-            pointer-events: none;
-            user-select: none;
-            z-index: 8;
-            animation: fadeOut 3.5s ease forwards;
-            white-space: nowrap
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-                transform: scale(1)
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(1.3)
-            }
-        }
-
-        @media(max-width:768px) {
-            #no {
-                font-size: 32vw
-            }
-
-            #tagline {
-                font-size: 6.4vw
-            }
-
-            #statusBox {
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-                width: 90vw;
-                margin: 2rem auto
-            }
-
-            #links a {
-                width: 48px;
-                height: 48px
-            }
-
-            #links a img {
-                width: 24px;
-                height: 24px
-            }
-        }
-
-        @media(max-width:768px) {
-            #no {
-                font-size: 32vw;
-            }
-
-            #tagline {
-                font-size: 6.4vw;
-            }
-
-            #statusBox {
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-                width: 90vw;
-                margin: 2rem auto;
-            }
-
-            #links a {
-                width: 48px;
-                height: 48px;
-            }
-
-            #links a img {
-                width: 24px;
-                height: 24px;
-            }
-
-            #topTitle {
-                font-size: 1.8rem;
-                max-width: calc(100% - 120px);
-                padding: 12px 15px 10px;
-                line-height: 1.3;
-                white-space: normal;
-                word-break: break-word;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div id="topTitle">Is Beta 5 out yet? 🤓☝️</div>
-
-    <section id="hero">
-        <h1 id="no">NO</h1>
-        <span id="tagline">, stop asking.</span>
-    </section>
-
-    <div id="statusBox">
-        <h3>Currently Working On:</h3>
-        <ul>
-            <li>Reworking Sprites</li>
-        </ul>
-        <h3>What's Left To Do:</h3>
-        <ul>
-            <li>Map Past Arc</li>
-            <li>Code Past Arc</li>
-        </ul>
-        <h3>What's Confirmed (Almost) Done:</h3>
-        <ul>
-            <li>Southern Isles</li>
-        </ul>
-        <h3>Estimated Update Date by the Developer:</h3>
-        <p>None</p>
+    <div class="navbar">
+        <h1 class="title">DittoNews</h1>
     </div>
 
-    <div id="links">
-        <a href="https://x.com/PkmnUnbreakTies" target="_blank" aria-label="Twitter / X"><span>𝕏</span></a>
-        <a href="https://www.patreon.com/c/SSamurai/home" target="_blank" aria-label="Patreon"><img
-                src="https://cdn-icons-png.flaticon.com/128/5968/5968747.png" alt="Patreon Icon"></a>
-    </div>
+    <div class="main-container">
+        <div class="window" id="leftWindow">
+        </div>
 
-    <div id="footer">Created and Administrated by Krul con Perish™</div>
+        <div class="window" id="middleWindow">
+            <h2 id="newsTitle">Welcome to DittoNews</h2>
+            <div id="newsContent">
+                <p><strong>No</strong>, Beta 5 is not out yet.<br><br>DittoNews is a fan-driven platform dedicated to
+                    gathering and sharing all publicly available information regarding the production of the upcoming
+                    <em>Pokémon Unbreakable Ties</em> Beta 5 update. This page does not leak any unreleased content.
+                    Instead, it exclusively compiles updates shared by the developer and occasionally comments on
+                    Patreon posts without revealing their content directly.<br><br>This initiative is made entirely by
+                    fans, for fans — with no intention of profit — and created purely out of passion and admiration for
+                    this incredible game.
+                </p>
+            </div>
+        </div>
+
+        <div class="window" id="rightWindow">
+            <div class="progress-container">
+                <strong>Working On:</strong><br>Finishing Southern Island
+                <div class="progress-bar" data-progress="95%">
+                    <div class="progress-fill" style="width:95%;"></div>
+                    <span class="label">95%</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <strong>New System (To be Revealed)</strong>
+                <div class="progress-bar" data-progress="0%">
+                    <div class="progress-fill" style="width:0;"></div>
+                    <span class="label">0%</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <strong>Currently Done (or Almost):</strong><br>Character Redesign (In Review)
+                <div class="progress-bar" data-progress="99%">
+                    <div class="progress-fill" style="width:99%;"></div>
+                    <span class="label">99%</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <strong>Left To Do:</strong><br>Past Arc
+                <div class="progress-bar" data-progress="0%">
+                    <div class="progress-fill" style="width:0;"></div>
+                    <span class="label">0%</span>
+                </div>
+            </div>
+            <div>
+                <strong>Estimated Finish Date:</strong><br>None
+            </div>
+        </div>
+    </div>
 
     <script>
-        function spawnStopAsking() {
-            const el = document.createElement('div');
-            el.className = 'stop-asking';
-            el.textContent = 'stop asking';
-            const safeW = window.innerWidth * 0.9;
-            const safeH = window.innerHeight * 0.9;
-            el.style.left = Math.random() * safeW + "px";
-            el.style.top = Math.random() * safeH + "px";
-            el.style.fontSize = (2 + Math.random() * 2) + 'vw';
-            document.body.appendChild(el);
-            setTimeout(() => el.remove(), 3500);
-        }
-        setInterval(spawnStopAsking, 800);
+        fetch('news.json')
+            .then(res => res.json())
+            .then(data => {
+                const listEl = document.getElementById('leftWindow');
+                data.forEach(item => {
+                    const el = document.createElement('a');
+                    el.href = "#";
+                    el.className = item.id === 'home' ? 'home-button' : 'newsItem';
+                    el.textContent = item.id === 'home' ? 'Home' : item.title;
+                    el.addEventListener('click', e => {
+                        e.preventDefault();
+                        document.getElementById('newsTitle').textContent = item.title;
+                        document.getElementById('newsContent').innerHTML = item.content;
+                    });
+                    listEl.appendChild(el);
+                });
+            })
+            .catch(err => console.error('Failed to load news.json:', err));
     </script>
 </body>
 
